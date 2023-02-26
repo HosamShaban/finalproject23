@@ -1,20 +1,36 @@
+import 'package:awesome_dialog/awesome_dialog.dart';
+import 'package:finalproject23/Consts/colors.dart';
+import 'package:finalproject23/auth/signin_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 class CreateNewPassword extends StatelessWidget {
   const CreateNewPassword({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var alertStyle = AlertStyle(
+      alertPadding: const EdgeInsets.all(15),
+      animationType: AnimationType.grow,
+      isCloseButton: false,
+      isOverlayTapDismiss: false,
+      descStyle: const TextStyle(
+          fontWeight: FontWeight.w400, fontSize: 16, color: Color(0xffA0A0A0)),
+      descTextAlign: TextAlign.start,
+      animationDuration: const Duration(milliseconds: 400),
+      alertBorder: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
+        side: const BorderSide(
+          color: Colors.grey,
+        ),
+      ),
+      titleStyle: const TextStyle(
+          fontWeight: FontWeight.w700, fontSize: 24, color: Color(0xff121111)),
+      alertAlignment: Alignment.center,
+    );
     return Scaffold(
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Container(
-            width: 119,
-            height: 111,
-            decoration: const BoxDecoration(
-                image:
-                    DecorationImage(image: AssetImage('images/Delmi 2.png'))),
-          ),
           Container(
             child: Column(
               children: [
@@ -39,43 +55,10 @@ class CreateNewPassword extends StatelessWidget {
                 const SizedBox(
                   height: 25,
                 ),
-                 Row(mainAxisAlignment: MainAxisAlignment.end, children: const [
-                  SizedBox(width: 30),
-                  Text(
-                    'كلمة المرور  ',
-                    style:  TextStyle(
-                        color: Colors.black, fontFamily: 'SST', fontSize: 16),
-                  ),
-                ]),
-                Container(
-                  width: double.infinity,
-                  height: 80,
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(
-                    Radius.circular(8),
-                  )),
-                  padding: const EdgeInsets.all(15),
-                  child: TextFormField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(
-                            width: 2, color: Colors.grey), //<-- SEE HERE
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      hintStyle: const TextStyle(
-                          fontFamily: 'SST',
-                          color: Color(0xffE2E2E2),
-                          fontSize: 13),
-                      fillColor: Colors.white,
-                      filled: true,
-                    ),
-                  ),
-                ),
-                Row(mainAxisAlignment: MainAxisAlignment.end, children: const[
+                Row(mainAxisAlignment: MainAxisAlignment.end, children: const [
                    SizedBox(width: 30),
                    Text(
-                    'تأكيد كلمة المرور  ',
+                    'كلمة السر  ',
                     style: TextStyle(
                         color: Colors.black, fontFamily: 'SST', fontSize: 16),
                   ),
@@ -91,46 +74,86 @@ class CreateNewPassword extends StatelessWidget {
                   child: TextFormField(
                     obscureText: true,
                     decoration: InputDecoration(
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(
-                            width: 2, color: Colors.grey), //<-- SEE HERE
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      hintStyle: const TextStyle(
-                          fontFamily: 'SST',
-                          color: Color(0xffE2E2E2),
-                          fontSize: 13),
-                      fillColor: Colors.white,
-                      filled: true,
-                    ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: const BorderSide(
+                              width: 2, color: Colors.grey), //<-- SEE HERE
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        hintText: '********',
+                        hintStyle: const TextStyle(
+                            fontFamily: 'SST',
+                            color: Color(0xff888888),
+                            fontSize: 13),
+                        fillColor: Colors.white,
+                        filled: true,
+                        suffixIcon: const Icon(Icons.lock_outline),
+                        suffixIconColor: const Color(0xfff888888)),
+                  ),
+                ),
+                Row(mainAxisAlignment: MainAxisAlignment.end, children: const[
+                   SizedBox(width: 30),
+                   Text(
+                    'تأكيد كلمة السر  ',
+                    style: TextStyle(
+                        color: Colors.black, fontFamily: 'SST', fontSize: 16),
+                  ),
+                ]),
+                Container(
+                  width: double.infinity,
+                  height: 80,
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(
+                    Radius.circular(8),
+                  )),
+                  padding: const EdgeInsets.all(15),
+                  child: TextFormField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: const BorderSide(
+                              width: 2, color: Colors.grey), //<-- SEE HERE
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        hintText: '********',
+                        hintStyle: const TextStyle(
+                            fontFamily: 'SST',
+                            color: Color(0xff888888),
+                            fontSize: 13),
+                        fillColor: Colors.white,
+                        filled: true,
+                        suffixIcon: const Icon(Icons.lock_outline),
+                        suffixIconColor: const Color(0xfff888888)),
                   ),
                 ),
               ],
             ),
           ),
-          InkWell(
-            onTap: () {},
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: const Color(0xff407BFF),
-              ),
-              margin: const EdgeInsets.all(20),
-              height: 48,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TextButton(
-                      onPressed: () {},
+          Container(
+            width: double.infinity,
+            height: 80,
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
+            padding: const EdgeInsets.all(15),
+            child: AnimatedButton(
+              text: 'انشاء حساب',
+              pressEvent: () {
+                Alert(
+                  context: context,
+                  style: alertStyle,
+                  type: AlertType.success,
+                  title: "تم تسجيل دخولك بنجاح ",
+                  desc: "أدخل كلمة السر الجديدة",
+                  buttons: [
+                    DialogButton(
+                      onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreen())),
+                      color: ConstColors.primaryColor,
                       child: const Text(
-                        'انشاء حساب',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 17,
-                            fontWeight: FontWeight.bold),
-                      )),
-                ],
-              ),
+                        "استمرار",
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
+                    ),
+                  ],
+                ).show();
+              },
             ),
           ),
         ]),

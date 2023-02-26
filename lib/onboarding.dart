@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:finalproject23/auth/signin_screen.dart';
+
 
 class OnBoarding extends StatefulWidget {
   const OnBoarding({Key? key}) : super(key: key);
@@ -30,7 +32,7 @@ class _OnBoardingState extends State<OnBoarding> {
                   color: Colors.white,
                   child: Column(
                     children: [
-                      Image.asset('assets/images/photo1.jpeg'),
+                      Image.asset('assets/images/photo1.jpg'),
                       const Text(
                         'النص العربي',
                         style: TextStyle(
@@ -105,14 +107,14 @@ class _OnBoardingState extends State<OnBoarding> {
             ),
           ),
           Container(
-            padding: const EdgeInsets.only(top: 60, left: 311),
+            padding: const EdgeInsets.only(top: 60, left: 300),
             child: TextButton(
-                onPressed: () => myController.jumpToPage(2),
+                onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreen())),
                 child: const Text(
                   'تخطي',
                   style: TextStyle(
                       color: Color(0xff888888),
-                      fontSize: 15,
+                      fontSize: 16,
                       fontWeight: FontWeight.bold),
                 )),
           )
@@ -122,7 +124,7 @@ class _OnBoardingState extends State<OnBoarding> {
         color: Colors.white,
         child: InkWell(
           onTap: () => myController.nextPage(
-              duration: const Duration(microseconds: 500),
+              duration: const Duration(microseconds: 300),
               curve: Curves.easeInOut),
           child: Container(
             decoration: BoxDecoration(
@@ -135,9 +137,7 @@ class _OnBoardingState extends State<OnBoarding> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 TextButton(
-                    onPressed: () => myController.nextPage(
-                        duration: const Duration(microseconds: 500),
-                        curve: Curves.easeInOut),
+                    onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreen())),
                     child: const Text(
                       'التالي',
                       style: TextStyle(

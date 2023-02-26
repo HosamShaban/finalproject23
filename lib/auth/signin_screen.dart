@@ -2,7 +2,7 @@ import 'package:finalproject23/auth/singup_screen.dart';
 import 'package:flutter/material.dart';
 import '../Consts/Defaultimages.dart';
 import '../Consts/colors.dart';
-import '../widget/custom_text_field.dart';
+import 'package:finalproject23/auth/ForgotPassword.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({
@@ -33,37 +33,101 @@ class _LoginScreenState extends State<LoginScreen> {
                 Image.asset(
                   alignment: Alignment.center,
                   fit: BoxFit.fill,
-                  'images/signin.jpg',
+                  'assets/images/signin.jpg',
                   width: 200,
                   height: 200,
                 ),
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child:CustomTextField(
-              controller: TextEditingController(),
-              hintText: "email@gmail.com",
-              inputType: TextInputType.visiblePassword,
-              image: DefaultImages.email,
-              obscureText: true,
-              labelText: "البريد الإلكتروني",
+          Row(mainAxisAlignment: MainAxisAlignment.end, children: const [
+            SizedBox(width: 30),
+            Text(
+            'البريد الإلكتروني',
+              style: TextStyle(
+                  color: Colors.black, fontFamily: 'SST', fontSize: 16),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 10, left: 18, right: 18),
-            child: CustomTextField(
-              controller: TextEditingController(),
-              hintText: "********",
-              inputType: TextInputType.visiblePassword,
-              image: DefaultImages.lock,
-              obscureText: true,
-              labelText: "كلمة السر",
-            ),
-          ),
+          ]),
           Container(
-            margin: const EdgeInsets.only(top: 30.0),
+            width: double.infinity,
+            height: 80,
+            decoration: const BoxDecoration(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(8),
+                )),
+            padding: const EdgeInsets.all(15),
+            child: TextFormField(
+              obscureText: true,
+              decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(
+                        width: 2, color: Colors.grey),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  hintText: 'email@gmail.com',
+                  hintStyle: const TextStyle(
+                      fontFamily: 'SST',
+                      color: Color(0xff888888),
+                      fontSize: 13),
+                  fillColor: Colors.white,
+                  filled: true,
+                  suffixIcon: const Icon(Icons.email_outlined),
+                  suffixIconColor: const Color(0xfff888888)),
+            ),
+          ),
+          Row(mainAxisAlignment: MainAxisAlignment.end, children: const [
+            SizedBox(width: 30),
+            Text(
+              'كلمة السر  ',
+              style: TextStyle(
+                  color: Colors.black, fontFamily: 'SST', fontSize: 16),
+            ),
+          ]),
+          Container(
+            width: double.infinity,
+            height: 80,
+            decoration: const BoxDecoration(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(8),
+                )),
+            padding: const EdgeInsets.all(15),
+            child: TextFormField(
+              obscureText: true,
+              decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(
+                        width: 2, color: Colors.grey),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  hintText: '********',
+                  hintStyle: const TextStyle(
+                      fontFamily: 'SST',
+                      color: Color(0xff888888),
+                      fontSize: 13),
+                  fillColor: Colors.white,
+                  filled: true,
+                  suffixIcon: const Icon(Icons.lock_outline),
+                  suffixIconColor: const Color(0xfff888888)),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ForgotPassword()));
+            },
+            child: const Padding(
+              padding: EdgeInsets.only(bottom: 5, left: 18, right: 18 , top: 1),
+              child: Text(
+                "هل نسيت كلمة السر؟",
+                style: TextStyle(
+                  fontSize: 14,
+                  color: ConstColors.text2Color
+                ),
+              ),
+            ),
+          ),
+
+          Container(
+            margin: const EdgeInsets.only(top: 15.0),
             padding: const EdgeInsets.only(left: 20.0, right: 20.0),
             child: Row(
               children: <Widget>[
@@ -95,7 +159,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ],
             ),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -116,9 +180,6 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ],
           ),
-          const SizedBox(
-            height: 20,
-          )
         ],
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:finalproject23/Consts/colors.dart';
+import 'package:finalproject23/View/personal_screen.dart';
 import 'package:finalproject23/auth/signin_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
@@ -144,7 +145,7 @@ class CreateNewPassword extends StatelessWidget {
                   desc: "أدخل كلمة السر الجديدة",
                   buttons: [
                     DialogButton(
-                      onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreen())),
+                      onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) =>  PersonalPage())),
                       color: ConstColors.primaryColor,
                       child: const Text(
                         "استمرار",

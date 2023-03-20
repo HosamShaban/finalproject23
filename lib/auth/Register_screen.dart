@@ -39,51 +39,39 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ],
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Expanded(
-                child: TextFormField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                      enabledBorder: OutlineInputBorder(
-                        borderSide:
-                            const BorderSide(width: 2, color: Colors.grey),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      hintText: 'الاسم الثاني',
-                      hintStyle: const TextStyle(
-                          fontFamily: 'SST',
-                          color: Color(0xff888888),
-                          fontSize: 13),
-                      fillColor: Colors.white,
-                      filled: true,
-                      suffixIcon: const Icon(Icons.person_outline),
-                      suffixIconColor: const Color(0xfff888888)),
-                ),
-              ),
-              SizedBox(width: 16),
-              Expanded(
-                child: TextFormField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                      enabledBorder: OutlineInputBorder(
-                        borderSide:
-                            const BorderSide(width: 2, color: Colors.grey),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      hintText: 'الاسم الاول',
-                      hintStyle: const TextStyle(
-                          fontFamily: 'SST',
-                          color: Color(0xff888888),
-                          fontSize: 13),
-                      fillColor: Colors.white,
-                      filled: true,
-                      suffixIcon: const Icon(Icons.person_outline),
-                      suffixIconColor: const Color(0xfff888888)),
-                ),
-              ),
-            ],
+          Row(mainAxisAlignment: MainAxisAlignment.end, children: const [
+            SizedBox(width: 30),
+            Text(
+              'الاسم كامل',
+              style: TextStyle(
+                  color: Colors.black, fontFamily: 'SST', fontSize: 16),
+            ),
+          ]),
+          Container(
+            width: double.infinity,
+            height: 80,
+            decoration: const BoxDecoration(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(8),
+                )),
+            padding: const EdgeInsets.all(15),
+            child: TextFormField(
+              obscureText: true,
+              decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(width: 2, color: Colors.grey),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  hintText: 'الاسم كامل',
+                  hintStyle: const TextStyle(
+                      fontFamily: 'SST',
+                      color: Color(0xff888888),
+                      fontSize: 13),
+                  fillColor: Colors.white,
+                  filled: true,
+                  suffixIcon: const Icon(Icons.person_outline),
+                  suffixIconColor: const Color(0xfff888888)),
+            ),
           ),
           const SizedBox(height: 15),
           Row(mainAxisAlignment: MainAxisAlignment.end, children: const [

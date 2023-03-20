@@ -1,3 +1,4 @@
+import 'package:finalproject23/View/personal_screen.dart';
 import 'package:finalproject23/auth/singup_screen.dart';
 import 'package:flutter/material.dart';
 import '../Consts/Defaultimages.dart';
@@ -152,7 +153,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ],
                     ),
                     onPressed: () => {
-                      //     Navigator.push(context, MaterialPageRoute(builder: (context) => Success()))
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => PersonalPage()))
                     },
                   ),
                 ),

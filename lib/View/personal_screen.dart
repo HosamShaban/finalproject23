@@ -31,7 +31,7 @@ class _PersonalPageState extends State<PersonalPage> {
     const DateScreen(),
     const DoctorScreen(),
     const ProfileScreen(),
-    const MeasureScreen()
+    const SugarMeasurement()
   ];
 
   @override

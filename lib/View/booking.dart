@@ -8,7 +8,6 @@ class AppointmentBooking extends StatefulWidget {
 }
 
 class _AppointmentBookingState extends State<AppointmentBooking> {
-  @override
   DateTime selectedDate = DateTime.now();
 
   Future<void> selectDate(BuildContext context) async {
@@ -38,15 +37,21 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
     }
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         actions: [
-          Container(
-            padding: const EdgeInsets.only(right: 5),
-            child: const Icon(
-              Icons.arrow_forward_ios,
-              color: Colors.black,
+          GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Container(
+              padding: const EdgeInsets.only(right: 5),
+              child: const Icon(
+                Icons.arrow_forward_ios,
+                color: Colors.black,
+              ),
             ),
           ),
         ],
@@ -157,6 +162,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                         onTap: selectTime,
                         keyboardType: TextInputType.datetime,
                         decoration: const InputDecoration(
+                          prefixIcon: Icon(Icons.punch_clock_rounded),
                           hintText: "8:15 ",
                           hintTextDirection: TextDirection.rtl,
                           border: InputBorder.none,
@@ -210,7 +216,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                           ElevatedButton.styleFrom(backgroundColor: const Color(0xff407BFF)),
                       onPressed: () {},
                       child: const Text(
-                        "حجز موغد",
+                        "حجز موعد",
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.w500),
                       )),

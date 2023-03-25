@@ -9,11 +9,16 @@ class doctorProfile extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         actions: [
-          Container(
-            padding: const EdgeInsets.only(right: 5),
-            child: const Icon(
-              Icons.arrow_forward_ios,
-              color: Colors.black,
+          GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Container(
+              padding: const EdgeInsets.only(right: 5),
+              child: const Icon(
+                Icons.arrow_forward_ios,
+                color: Colors.black,
+              ),
             ),
           ),
         ],

@@ -1,3 +1,4 @@
+import 'package:finalproject23/View/doctorprofile.dart';
 import 'package:finalproject23/View/filter_view.dart';
 import 'package:finalproject23/controller/doctors_controller.dart';
 import 'package:finalproject23/widget/NavBar.dart';
@@ -123,11 +124,22 @@ class _DoctorScreenState extends State<DoctorScreen> {
                   }
                   return Padding(
                     padding: const EdgeInsets.only(right: 5, bottom: 15),
-                    child: DoctorsCard(
-                      title: item.title,
-                      image: item.image,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const doctorProfile(),
+                          ),
+                        );
+                      },
+                      child: DoctorsCard(
+                        title: item.title,
+                        image: item.image,
+                      ),
                     ),
                   );
+
                 },
               ),
             ),

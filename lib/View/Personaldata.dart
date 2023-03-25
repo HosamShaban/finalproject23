@@ -118,7 +118,7 @@ class _PersonaldataState extends State<Personaldata> {
                                   child: Text(value),
                                 );
                               }).toList(),
-                              hint: const Text('انئر يغالي'),
+                              hint: const Text('اختر'),
                               onChanged: (value) {
                                 setState(() {
                                   selectval = value!;

@@ -82,7 +82,7 @@ class NavBar extends StatelessWidget {
               Navigator.pop(context);
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const MeasureScreen()),
+                MaterialPageRoute(builder: (context) => const SugarMeasurement()),
               );
             },
             contentPadding: const EdgeInsets.symmetric(horizontal: 16),

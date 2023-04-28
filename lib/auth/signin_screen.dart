@@ -58,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 )),
             padding: const EdgeInsets.all(15),
             child: TextFormField(
-              obscureText: true,
+              textAlign: TextAlign.right,
               decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
                     borderSide: const BorderSide(
@@ -93,6 +93,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 )),
             padding: const EdgeInsets.all(15),
             child: TextFormField(
+              textAlign: TextAlign.right,
               obscureText: true,
               decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
@@ -164,21 +165,23 @@ class _LoginScreenState extends State<LoginScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              InkWell(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpScreen()));
+                },
+                child: const Text(
+                  "  انشاء حساب",
+                  style: TextStyle(color: ConstColors.primaryColor),
+                ),
+              ),
+              const SizedBox(width: 3),
               const Text(
-                "ليس لديك حساب ؟",
+                "ليس لديك حساب؟ ",
                 style: TextStyle(
                   color: ConstColors.text2Color,
                 ),
               ),
-              InkWell(
-                onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpScreen()));
-                },
-                child: const Text(
-                  " انشاء حساب",
-                  style: TextStyle(color: ConstColors.primaryColor),
-                ),
-              ),
+
             ],
           ),
         ],

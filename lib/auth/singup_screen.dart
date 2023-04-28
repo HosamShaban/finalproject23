@@ -65,7 +65,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 )),
             padding: const EdgeInsets.all(15),
             child: TextFormField(
-              obscureText: true,
+              textAlign: TextAlign.right,
               decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
                     borderSide: const BorderSide(
@@ -120,21 +120,23 @@ class _SignUpScreenState extends State<SignUpScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              InkWell(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreen()));
+                },
+                child: const Text(
+                  "  تسجيل الدخول",
+                  style: TextStyle(color: ConstColors.primaryColor),
+                ),
+              ),
+              const SizedBox(width: 3),
               const Text(
-                "هل بالفعل لديك حساب ؟",
+                "هل بالفعل لديك حساب؟",
                 style: TextStyle(
                   color: ConstColors.text2Color,
                 ),
               ),
-              InkWell(
-                onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreen()));
-                },
-                child: const Text(
-                  " تسجيل الدخول",
-                  style: TextStyle(color: ConstColors.primaryColor),
-                ),
-              ),
+
             ],
           ),
           const SizedBox(

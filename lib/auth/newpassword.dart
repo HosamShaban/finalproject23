@@ -57,8 +57,8 @@ class CreateNewPassword extends StatelessWidget {
                   height: 25,
                 ),
                 Row(mainAxisAlignment: MainAxisAlignment.end, children: const [
-                   SizedBox(width: 30),
-                   Text(
+                  SizedBox(width: 30),
+                  Text(
                     'كلمة السر  ',
                     style: TextStyle(
                         color: Colors.black, fontFamily: 'SST', fontSize: 16),
@@ -73,6 +73,7 @@ class CreateNewPassword extends StatelessWidget {
                   )),
                   padding: const EdgeInsets.all(15),
                   child: TextFormField(
+                    textAlign: TextAlign.right,
                     obscureText: true,
                     decoration: InputDecoration(
                         enabledBorder: OutlineInputBorder(
@@ -91,9 +92,9 @@ class CreateNewPassword extends StatelessWidget {
                         suffixIconColor: const Color(0xfff888888)),
                   ),
                 ),
-                Row(mainAxisAlignment: MainAxisAlignment.end, children: const[
-                   SizedBox(width: 30),
-                   Text(
+                Row(mainAxisAlignment: MainAxisAlignment.end, children: const [
+                  SizedBox(width: 30),
+                  Text(
                     'تأكيد كلمة السر  ',
                     style: TextStyle(
                         color: Colors.black, fontFamily: 'SST', fontSize: 16),
@@ -108,6 +109,7 @@ class CreateNewPassword extends StatelessWidget {
                   )),
                   padding: const EdgeInsets.all(15),
                   child: TextFormField(
+                    textAlign: TextAlign.right,
                     obscureText: true,
                     decoration: InputDecoration(
                         enabledBorder: OutlineInputBorder(
@@ -145,7 +147,10 @@ class CreateNewPassword extends StatelessWidget {
                   desc: "أدخل كلمة السر الجديدة",
                   buttons: [
                     DialogButton(
-                      onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) =>  PersonalPage())),
+                      onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => PersonalPage())),
                       color: ConstColors.primaryColor,
                       child: const Text(
                         "استمرار",

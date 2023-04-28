@@ -63,7 +63,7 @@ class _PersonalPageState extends State<PersonalPage> {
             TabCard(
               color: currentScreenIndex == 4
                   ? ConstColors.whiteFontColor
-                  : ConstColors.text2Color,
+                  : const Color(0xffbdb7b7),
               image: DefaultImages.measure,
               title: "قياس السكر",
               onTap: () {
@@ -76,7 +76,7 @@ class _PersonalPageState extends State<PersonalPage> {
             TabCard(
               color: currentScreenIndex == 1
                   ? ConstColors.whiteFontColor
-                  : ConstColors.text2Color,
+                  : const Color(0xffbdb7b7),
               image: DefaultImages.date,
               title: "مواعيدي",
               onTap: () {
@@ -90,7 +90,7 @@ class _PersonalPageState extends State<PersonalPage> {
             TabCard(
               color: currentScreenIndex == 0
                   ? ConstColors.whiteFontColor
-                  : ConstColors.text2Color,
+                  : const Color(0xffbdb7b7),
               image: DefaultImages.home,
               title: "الرئيسية",
               onTap: () {
@@ -103,7 +103,7 @@ class _PersonalPageState extends State<PersonalPage> {
             TabCard(
               color: currentScreenIndex == 2
                   ? ConstColors.whiteFontColor
-                  : ConstColors.text2Color,
+                  : const Color(0xffbdb7b7),
               image: DefaultImages.doctors,
               title: "الأطباء",
               onTap: () {
@@ -116,7 +116,7 @@ class _PersonalPageState extends State<PersonalPage> {
             TabCard(
               color: currentScreenIndex == 3
                   ? ConstColors.whiteFontColor
-                  : ConstColors.text2Color,
+                  : const Color(0xffbdb7b7),
               image: DefaultImages.profile,
               title: "صفحتي",
               onTap: () {

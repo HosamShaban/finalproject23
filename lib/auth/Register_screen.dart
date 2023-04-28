@@ -56,7 +56,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 )),
             padding: const EdgeInsets.all(15),
             child: TextFormField(
-              obscureText: true,
+              textAlign: TextAlign.right,
               decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
                     borderSide: const BorderSide(width: 2, color: Colors.grey),
@@ -91,7 +91,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             )),
             padding: const EdgeInsets.all(15),
             child: TextFormField(
-              obscureText: true,
+              textAlign: TextAlign.right,
               decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
                     borderSide: const BorderSide(width: 2, color: Colors.grey),
@@ -125,6 +125,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             )),
             padding: const EdgeInsets.all(15),
             child: TextFormField(
+              textAlign: TextAlign.right,
               obscureText: true,
               decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
@@ -159,6 +160,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             )),
             padding: const EdgeInsets.all(15),
             child: TextFormField(
+              textAlign: TextAlign.right,
               obscureText: true,
               decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
@@ -209,16 +211,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ],
             ),
           ),
-          const SizedBox(height: 5),
+          const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
-                "هل بالفعل لديك حساب ؟",
-                style: TextStyle(
-                  color: ConstColors.text2Color,
-                ),
-              ),
               InkWell(
                 onTap: () {
                   Navigator.push(
@@ -231,6 +227,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   style: TextStyle(color: ConstColors.primaryColor),
                 ),
               ),
+              const SizedBox(width: 3),
+              const Text(
+                "هل بالفعل لديك حساب؟",
+                style: TextStyle(
+                  color: ConstColors.text2Color,
+                ),
+              ),
+
             ],
           )
         ],

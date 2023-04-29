@@ -4,7 +4,6 @@ import '../Consts/Defaultimages.dart';
 import '../Consts/colors.dart';
 import 'package:finalproject23/auth/Register_screen.dart';
 
-
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({
     Key? key,
@@ -53,7 +52,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             Text(
               'البريد الإلكتروني',
               style: TextStyle(
-                  color: Colors.black, fontFamily: 'SST', fontSize: 16),
+                  color: Colors.black, fontFamily: 'Tajawal', fontSize: 16),
             ),
           ]),
           Container(
@@ -61,20 +60,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
             height: 80,
             decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(
-                  Radius.circular(8),
-                )),
+              Radius.circular(8),
+            )),
             padding: const EdgeInsets.all(15),
             child: TextFormField(
               textAlign: TextAlign.right,
               decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                        width: 2, color: Colors.grey),
+                    borderSide: const BorderSide(width: 2, color: Colors.grey),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   hintText: 'email@gmail.com',
                   hintStyle: const TextStyle(
-                      fontFamily: 'SST',
+                      fontFamily: 'Tajawal',
                       color: Color(0xff888888),
                       fontSize: 13),
                   fillColor: Colors.white,
@@ -109,7 +107,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ],
                     ),
                     onPressed: () => {
-                           Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterScreen()))
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => RegisterScreen()))
                     },
                   ),
                 ),
@@ -122,7 +123,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
             children: [
               InkWell(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreen()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const LoginScreen()));
                 },
                 child: const Text(
                   "  تسجيل الدخول",
@@ -136,7 +140,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   color: ConstColors.text2Color,
                 ),
               ),
-
             ],
           ),
           const SizedBox(

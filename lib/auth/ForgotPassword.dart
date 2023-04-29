@@ -4,7 +4,6 @@ import 'package:finalproject23/auth/signin_screen.dart';
 import 'package:finalproject23/auth/newpassword.dart';
 import 'package:finalproject23/auth/verify_email_screen.dart';
 
-
 class ForgotPassword extends StatelessWidget {
   static String id = '/ForgotPassword';
   late String email;
@@ -48,7 +47,7 @@ class ForgotPassword extends StatelessWidget {
                 Text(
                   'البريد الإلكتروني',
                   style: TextStyle(
-                      color: Colors.black, fontFamily: 'SST', fontSize: 16),
+                      fontFamily: 'Tajawal', color: Colors.black, fontSize: 16),
                 ),
               ]),
               Container(
@@ -69,7 +68,7 @@ class ForgotPassword extends StatelessWidget {
                     ),
                     hintText: 'email@gmail.com',
                     hintStyle: const TextStyle(
-                        fontFamily: 'SST',
+                        fontFamily: 'Tajawal',
                         color: Color(0xff888888),
                         fontSize: 16),
                     fillColor: Colors.white,
@@ -94,8 +93,10 @@ class ForgotPassword extends StatelessWidget {
               children: [
                 TextButton(
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => VerifyMobileScreen()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => VerifyMobileScreen()));
                     },
                     child: const Text(
                       'استمرار',

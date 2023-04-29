@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:finalproject23/auth/signin_screen.dart';
 
-
 class OnBoarding extends StatefulWidget {
   const OnBoarding({Key? key}) : super(key: key);
 
@@ -33,15 +32,21 @@ class _OnBoardingState extends State<OnBoarding> {
                   child: Column(
                     children: [
                       Image.asset('assets/images/photo1.jpg'),
-                      const Text(
-                        'النص العربي',
-                        style: TextStyle(
-                            fontSize: 24, fontWeight: FontWeight.w700),
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        child: const Text(
+                          'النص العربي',
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.w700),
+                        ),
                       ),
-                      const Text(
-                        'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة',
-                        style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.w700),
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        child: const Text(
+                          'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة',
+                          style: TextStyle(
+                              fontSize: 15, fontWeight: FontWeight.w700),
+                        ),
                       ),
                     ],
                   ),
@@ -52,15 +57,21 @@ class _OnBoardingState extends State<OnBoarding> {
                   child: Column(
                     children: [
                       Image.asset('assets/images/photo4.jpeg'),
-                      const Text(
-                        'النص العربي',
-                        style: TextStyle(
-                            fontSize: 24, fontWeight: FontWeight.w700),
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        child: const Text(
+                          'النص العربي',
+                          style: TextStyle(
+                              fontSize: 24, fontWeight: FontWeight.w700),
+                        ),
                       ),
-                      const Text(
-                        'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة',
-                        style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.w700),
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        child: const Text(
+                          'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة',
+                          style: TextStyle(
+                              fontSize: 15, fontWeight: FontWeight.w700),
+                        ),
                       ),
                     ],
                   ),
@@ -71,15 +82,21 @@ class _OnBoardingState extends State<OnBoarding> {
                   child: Column(
                     children: [
                       Image.asset('assets/images/photo3.jpeg'),
-                      const Text(
-                        'النص العربي',
-                        style: TextStyle(
-                            fontSize: 24, fontWeight: FontWeight.w700),
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        child: const Text(
+                          'النص العربي',
+                          style: TextStyle(
+                              fontSize: 24, fontWeight: FontWeight.w700),
+                        ),
                       ),
-                      const Text(
-                        'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة',
-                        style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.w700),
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        child: const Text(
+                          'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة',
+                          style: TextStyle(
+                              fontSize: 15, fontWeight: FontWeight.w700),
+                        ),
                       ),
                     ],
                   ),
@@ -109,7 +126,10 @@ class _OnBoardingState extends State<OnBoarding> {
           Container(
             padding: const EdgeInsets.only(top: 60, left: 300),
             child: TextButton(
-                onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreen())),
+                onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const LoginScreen())),
                 child: const Text(
                   'تخطي',
                   style: TextStyle(
@@ -137,7 +157,10 @@ class _OnBoardingState extends State<OnBoarding> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 TextButton(
-                    onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreen())),
+                    onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LoginScreen())),
                     child: const Text(
                       'التالي',
                       style: TextStyle(

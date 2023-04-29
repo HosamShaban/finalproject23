@@ -38,7 +38,7 @@ class _VerifyMobileScreenState extends State<VerifyMobileScreen> {
                 const Text(
                   'أدخل رمز التحقق',
                   style: TextStyle(
-                      fontFamily: 'SST',
+                      fontFamily: 'Tajawal',
                       fontSize: 24,
                       color: Color(0xff121111),
                       fontWeight: FontWeight.w700),
@@ -47,7 +47,7 @@ class _VerifyMobileScreenState extends State<VerifyMobileScreen> {
                 const Text(
                   'تم ارسال رسالة مكونة من 4 أرقام على \n email@gmail.com  بريدك الإالكتروني',
                   style: TextStyle(
-                      fontFamily: 'SST',
+                      fontFamily: 'Tajawal',
                       fontSize: 16,
                       color: Color(0xffA0A0A0),
                       fontWeight: FontWeight.w700),
@@ -104,7 +104,7 @@ class _VerifyMobileScreenState extends State<VerifyMobileScreen> {
                         color: ConstColors.primaryColor,
                       ),
                     ),
-                     SizedBox(width: 3),
+                    SizedBox(width: 3),
                     Text(
                       "لم يصلك الرمز؟ ",
                       style: TextStyle(
@@ -112,7 +112,6 @@ class _VerifyMobileScreenState extends State<VerifyMobileScreen> {
                         color: ConstColors.text2Color,
                       ),
                     ),
-
                   ],
                 ),
               ],

@@ -1,9 +1,15 @@
+import 'package:finalproject23/Model/doctors_model.dart';
 import 'package:finalproject23/View/booking.dart';
 import 'package:flutter/material.dart';
 
-class doctorProfile extends StatelessWidget {
+class doctorProfile extends StatefulWidget {
   const doctorProfile({Key? key}) : super(key: key);
 
+  @override
+  State<doctorProfile> createState() => _doctorProfileState();
+}
+
+class _doctorProfileState extends State<doctorProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,20 +57,20 @@ class doctorProfile extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: const [
-                 Icon(
+                Icon(
                   Icons.star,
                   color: Colors.orange,
                 ),
-                 Icon(
+                Icon(
                   Icons.star,
                   color: Colors.orange,
                 ),
-                 Icon(
+                Icon(
                   Icons.star,
                   color: Colors.orange,
                 ),
-                 Icon(Icons.star_border),
-                 Icon(Icons.star_border),
+                Icon(Icons.star_border),
+                Icon(Icons.star_border),
               ],
             ),
             Container(
@@ -80,7 +86,7 @@ class doctorProfile extends StatelessWidget {
             Container(
               padding: const EdgeInsets.only(top: 10),
               width: 327,
-              height: 147,
+              height: 200,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
                 color: const Color(0xffD9D9D9),
@@ -89,7 +95,7 @@ class doctorProfile extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Container(
+                      /* Container(
                         margin: const EdgeInsets.only(left: 5.5),
                         width: 91,
                         height: 22,
@@ -106,9 +112,9 @@ class doctorProfile extends StatelessWidget {
                                 fontWeight: FontWeight.w400),
                           ),
                         ),
-                      ),
+                      ),*/
                       Container(
-                        margin: const EdgeInsets.only(left: 130),
+                        margin: const EdgeInsets.only(left: 200, top: 3),
                         child: const Text(
                           "ساعات العمل",
                           style: TextStyle(
@@ -120,12 +126,12 @@ class doctorProfile extends StatelessWidget {
                     ],
                   ),
                   Container(
-                    margin: const EdgeInsets.only(left: 96),
+                    margin: const EdgeInsets.only(left: 10),
                     child: const Text(
                       " من الساعة الثامنة صباحا حتى الساعة الثانية ظهرا",
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 12,
+                          fontSize: 15,
                           fontWeight: FontWeight.w500),
                     ),
                   ),
@@ -146,13 +152,13 @@ class doctorProfile extends StatelessWidget {
                       "example@gmail.com",
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 12,
+                          fontSize: 15,
                           fontWeight: FontWeight.w500),
                     ),
                   ),
                   const SizedBox(height: 15),
                   Container(
-                    margin: const EdgeInsets.only(left: 190),
+                    margin: const EdgeInsets.only(left: 210),
                     child: const Text(
                       "رقم الجوال",
                       style: TextStyle(
@@ -162,12 +168,12 @@ class doctorProfile extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    margin: const EdgeInsets.only(left: 190),
+                    margin: const EdgeInsets.only(left: 210),
                     child: const Text(
                       "05999999999",
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 12,
+                          fontSize: 15,
                           fontWeight: FontWeight.w500),
                     ),
                   ),
@@ -193,6 +199,7 @@ class doctorProfile extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
                 color: const Color(0xffD9D9D9),
               ),
+              child: Text(''),
             ),
             const SizedBox(height: 20),
             Center(
@@ -200,7 +207,8 @@ class doctorProfile extends StatelessWidget {
                 width: 311,
                 height: 48,
                 child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xff407BFF)),
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xff407BFF)),
                     onPressed: () {},
                     child: const Text(
                       "تحدث مع الطبيب",
@@ -215,9 +223,14 @@ class doctorProfile extends StatelessWidget {
                 width: 311,
                 height: 48,
                 child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xff407BFF)),
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xff407BFF)),
                     onPressed: () {
-                     Navigator.push(context,MaterialPageRoute(builder: (context) => const AppointmentBooking()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const AppointmentBooking()));
                     },
                     child: const Text(
                       "حجز موعد",
@@ -225,7 +238,8 @@ class doctorProfile extends StatelessWidget {
                           TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                     )),
               ),
-            )
+            ),
+            SizedBox(height: 20),
           ],
         ),
       ),

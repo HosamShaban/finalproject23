@@ -44,9 +44,9 @@ class _LoginScreenState extends State<LoginScreen> {
           Row(mainAxisAlignment: MainAxisAlignment.end, children: const [
             SizedBox(width: 30),
             Text(
-            'البريد الإلكتروني',
+              'البريد الإلكتروني',
               style: TextStyle(
-                  color: Colors.black, fontFamily: 'SST', fontSize: 16),
+                  color: Colors.black, fontFamily: 'Tajawal', fontSize: 16),
             ),
           ]),
           Container(
@@ -54,20 +54,19 @@ class _LoginScreenState extends State<LoginScreen> {
             height: 80,
             decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(
-                  Radius.circular(8),
-                )),
+              Radius.circular(8),
+            )),
             padding: const EdgeInsets.all(15),
             child: TextFormField(
               textAlign: TextAlign.right,
               decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                        width: 2, color: Colors.grey),
+                    borderSide: const BorderSide(width: 2, color: Colors.grey),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   hintText: 'email@gmail.com',
                   hintStyle: const TextStyle(
-                      fontFamily: 'SST',
+                      fontFamily: 'Tajawal',
                       color: Color(0xff888888),
                       fontSize: 13),
                   fillColor: Colors.white,
@@ -81,7 +80,7 @@ class _LoginScreenState extends State<LoginScreen> {
             Text(
               'كلمة السر  ',
               style: TextStyle(
-                  color: Colors.black, fontFamily: 'SST', fontSize: 16),
+                  color: Colors.black, fontFamily: 'Tajawal', fontSize: 16),
             ),
           ]),
           Container(
@@ -89,21 +88,20 @@ class _LoginScreenState extends State<LoginScreen> {
             height: 80,
             decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(
-                  Radius.circular(8),
-                )),
+              Radius.circular(8),
+            )),
             padding: const EdgeInsets.all(15),
             child: TextFormField(
               textAlign: TextAlign.right,
               obscureText: true,
               decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                        width: 2, color: Colors.grey),
+                    borderSide: const BorderSide(width: 2, color: Colors.grey),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   hintText: '********',
                   hintStyle: const TextStyle(
-                      fontFamily: 'SST',
+                      fontFamily: 'Tajawal',
                       color: Color(0xff888888),
                       fontSize: 13),
                   fillColor: Colors.white,
@@ -114,20 +112,17 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           InkWell(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => ForgotPassword()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ForgotPassword()));
             },
             child: const Padding(
-              padding: EdgeInsets.only(bottom: 5, left: 18, right: 18 , top: 1),
+              padding: EdgeInsets.only(bottom: 5, left: 18, right: 18, top: 1),
               child: Text(
                 "هل نسيت كلمة السر؟",
-                style: TextStyle(
-                  fontSize: 14,
-                  color: ConstColors.text2Color
-                ),
+                style: TextStyle(fontSize: 14, color: ConstColors.text2Color),
               ),
             ),
           ),
-
           Container(
             margin: const EdgeInsets.only(top: 15.0),
             padding: const EdgeInsets.only(left: 20.0, right: 20.0),
@@ -154,7 +149,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       ],
                     ),
                     onPressed: () => {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => PersonalPage()))
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => PersonalPage()))
                     },
                   ),
                 ),
@@ -167,7 +165,10 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               InkWell(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpScreen()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SignUpScreen()));
                 },
                 child: const Text(
                   "  انشاء حساب",
@@ -181,7 +182,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   color: ConstColors.text2Color,
                 ),
               ),
-
             ],
           ),
         ],

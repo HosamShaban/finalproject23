@@ -44,7 +44,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             Text(
               'الاسم كامل',
               style: TextStyle(
-                  color: Colors.black, fontFamily: 'SST', fontSize: 16),
+                  color: Colors.black, fontFamily: 'Tajawal', fontSize: 16),
             ),
           ]),
           Container(
@@ -52,8 +52,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
             height: 80,
             decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(
-                  Radius.circular(8),
-                )),
+              Radius.circular(8),
+            )),
             padding: const EdgeInsets.all(15),
             child: TextFormField(
               textAlign: TextAlign.right,
@@ -64,7 +64,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                   hintText: 'الاسم كامل',
                   hintStyle: const TextStyle(
-                      fontFamily: 'SST',
+                      fontFamily: 'Tajawal',
                       color: Color(0xff888888),
                       fontSize: 13),
                   fillColor: Colors.white,
@@ -79,7 +79,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             Text(
               'البريد الإلكتروني',
               style: TextStyle(
-                  color: Colors.black, fontFamily: 'SST', fontSize: 16),
+                  color: Colors.black, fontFamily: 'Tajawal', fontSize: 16),
             ),
           ]),
           Container(
@@ -99,7 +99,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                   hintText: 'email@gmail.com',
                   hintStyle: const TextStyle(
-                      fontFamily: 'SST',
+                      fontFamily: 'Tajawal',
                       color: Color(0xff888888),
                       fontSize: 13),
                   fillColor: Colors.white,
@@ -113,7 +113,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             Text(
               'كلمة السر  ',
               style: TextStyle(
-                  color: Colors.black, fontFamily: 'SST', fontSize: 16),
+                  color: Colors.black, fontFamily: 'Tajawal', fontSize: 16),
             ),
           ]),
           Container(
@@ -134,7 +134,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                   hintText: '********',
                   hintStyle: const TextStyle(
-                      fontFamily: 'SST',
+                      fontFamily: 'Tajawal',
                       color: Color(0xff888888),
                       fontSize: 13),
                   fillColor: Colors.white,
@@ -148,7 +148,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             Text(
               'تأكيد كلمة السر  ',
               style: TextStyle(
-                  color: Colors.black, fontFamily: 'SST', fontSize: 16),
+                  color: Colors.black, fontFamily: 'Tajawal', fontSize: 16),
             ),
           ]),
           Container(
@@ -170,7 +170,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                   hintText: '********',
                   hintStyle: const TextStyle(
-                      fontFamily: 'SST',
+                      fontFamily: 'Tajawal',
                       color: Color(0xff888888),
                       fontSize: 13),
                   fillColor: Colors.white,
@@ -234,7 +234,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   color: ConstColors.text2Color,
                 ),
               ),
-
             ],
           )
         ],

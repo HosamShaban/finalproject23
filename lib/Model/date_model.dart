@@ -1,8 +1,7 @@
 class DateModel {
-  final String title;
-  final String image;
-  final String booking;
+  String title;
+  String image;
+  String booking;
 
-
-  DateModel(this.title, this.image , this.booking);
+  DateModel(this.title, this.image, this.booking);
 }

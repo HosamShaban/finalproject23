@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
-void main() async{
+void main() async {
   runApp(const MyApp());
 }
 
@@ -25,9 +25,7 @@ class MyApp extends StatelessWidget {
           child: MaterialApp(
             home: const OnBoarding(),
             debugShowCheckedModeBanner: false,
-            theme: ThemeData(
-              primarySwatch: Colors.blue,
-            ),
+            theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Tajawal'),
           ),
         );
       },

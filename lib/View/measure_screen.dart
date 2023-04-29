@@ -65,7 +65,7 @@ class SugarMeasurement extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const SizedBox(width: 10),
+                      const SizedBox(width: 15),
                       const Text("صائم"),
                     ],
                   ),
@@ -92,7 +92,7 @@ class SugarMeasurement extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const SizedBox(width: 10),
+                      const SizedBox(width: 16),
                       const Text("فاطر"),
                     ],
                   ),
@@ -119,7 +119,7 @@ class SugarMeasurement extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const SizedBox(width: 5),
+                      const SizedBox(width: 3),
                       const Text("عشوائي"),
                     ],
                   ),
@@ -131,12 +131,12 @@ class SugarMeasurement extends StatelessWidget {
               width: 327,
               height: 48,
               child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(backgroundColor: const Color(0xff407BFF)),
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xff407BFF)),
                   onPressed: () {},
                   child: const Text(
                     "تسجيل",
-                    style:
-                        TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                   )),
             ),
           ],

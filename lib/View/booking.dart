@@ -101,6 +101,9 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                   ],
                 ),
               ),
+              const SizedBox(
+                height: 10,
+              ),
               Center(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
@@ -126,7 +129,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                         onTap: () => selectDate(context),
                         keyboardType: TextInputType.datetime,
                         decoration: const InputDecoration(
-                          hintText: "7/11/1961",
+                          hintText: "يوم السبت",
                           hintTextDirection: TextDirection.rtl,
                           border: InputBorder.none,
                         ),
@@ -196,7 +199,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                         onTap: selectTime,
                         keyboardType: TextInputType.datetime,
                         decoration: const InputDecoration(
-                          prefixIcon: Icon(Icons.punch_clock_rounded),
+                          prefixIcon: Icon(Icons.punch_clock_sharp),
                           hintText: "8:15 ",
                           hintTextDirection: TextDirection.rtl,
                           border: InputBorder.none,
@@ -246,8 +249,8 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                   width: 311,
                   height: 48,
                   child: ElevatedButton(
-                      style:
-                          ElevatedButton.styleFrom(backgroundColor: const Color(0xff407BFF)),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xff407BFF)),
                       onPressed: () {},
                       child: const Text(
                         "حجز موعد",

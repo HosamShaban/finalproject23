@@ -150,6 +150,27 @@ class doctorProfile extends StatelessWidget {
                           fontWeight: FontWeight.w500),
                     ),
                   ),
+                  const SizedBox(height: 15),
+                  Container(
+                    margin: const EdgeInsets.only(left: 190),
+                    child: const Text(
+                      "رقم الجوال",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(left: 190),
+                    child: const Text(
+                      "05999999999",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
                 ],
               ),
             ),

@@ -101,6 +101,40 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                   ],
                 ),
               ),
+              Center(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    const Text(
+                      "يوم الحجز",
+                      style: TextStyle(
+                          color: Color(0xff000000),
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.only(right: 10),
+                      decoration: BoxDecoration(
+                          color: const Color(0xffEAEAEA),
+                          borderRadius: BorderRadius.circular(12.0)),
+                      width: 311,
+                      height: 48,
+                      child: TextFormField(
+                        onTap: () => selectDate(context),
+                        keyboardType: TextInputType.datetime,
+                        decoration: const InputDecoration(
+                          hintText: "7/11/1961",
+                          hintTextDirection: TextDirection.rtl,
+                          border: InputBorder.none,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               const SizedBox(height: 15),
               Center(
                 child: Column(

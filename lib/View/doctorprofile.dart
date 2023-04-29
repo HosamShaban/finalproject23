@@ -80,7 +80,7 @@ class doctorProfile extends StatelessWidget {
             Container(
               padding: const EdgeInsets.only(top: 10),
               width: 327,
-              height: 147,
+              height: 200,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
                 color: const Color(0xffD9D9D9),
@@ -152,7 +152,7 @@ class doctorProfile extends StatelessWidget {
                   ),
                   const SizedBox(height: 15),
                   Container(
-                    margin: const EdgeInsets.only(left: 190),
+                    margin: const EdgeInsets.only(left: 210),
                     child: const Text(
                       "رقم الجوال",
                       style: TextStyle(
@@ -162,7 +162,7 @@ class doctorProfile extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    margin: const EdgeInsets.only(left: 190),
+                    margin: const EdgeInsets.only(left: 210),
                     child: const Text(
                       "05999999999",
                       style: TextStyle(

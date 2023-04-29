@@ -101,6 +101,9 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                   ],
                 ),
               ),
+              const SizedBox(
+                height: 10,
+              ),
               Center(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
@@ -126,7 +129,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                         onTap: () => selectDate(context),
                         keyboardType: TextInputType.datetime,
                         decoration: const InputDecoration(
-                          hintText: "7/11/1961",
+                          hintText: "يوم السبت",
                           hintTextDirection: TextDirection.rtl,
                           border: InputBorder.none,
                         ),

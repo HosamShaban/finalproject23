@@ -104,7 +104,6 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
               const SizedBox(
                 height: 10,
               ),
-
               Center(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,

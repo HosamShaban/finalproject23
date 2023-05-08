@@ -1,6 +1,5 @@
 import 'package:finalproject23/Consts/colors.dart';
 import 'package:finalproject23/controller/date_controller.dart';
-import 'package:finalproject23/widget/NavBar.dart';
 import 'package:finalproject23/widget/date_card.dart';
 import 'package:flutter/material.dart';
 
@@ -43,7 +42,6 @@ void dispose() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    endDrawer: NavBar(),
     appBar: AppBar(
       elevation: 0.0,
       title: const Text(
@@ -56,21 +54,6 @@ Widget build(BuildContext context) {
       ),
       centerTitle: true,
       backgroundColor: Colors.white,
-      actions: [
-        Builder(
-          builder: (BuildContext context) {
-            return IconButton(
-              onPressed: () {
-                Scaffold.of(context).openEndDrawer();
-              },
-              icon: const Icon(
-                Icons.menu,
-                color: Colors.black,
-              ),
-            );
-          },
-        ),
-      ],
     ),
     body: Column(
       children: [

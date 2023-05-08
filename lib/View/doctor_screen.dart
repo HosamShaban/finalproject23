@@ -1,7 +1,6 @@
 import 'package:finalproject23/View/doctorprofile.dart';
 import 'package:finalproject23/View/filter_view.dart';
 import 'package:finalproject23/controller/doctors_controller.dart';
-import 'package:finalproject23/widget/NavBar.dart';
 import 'package:finalproject23/widget/doctors_card.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +22,6 @@ class _DoctorScreenState extends State<DoctorScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      endDrawer: NavBar(),
       appBar: AppBar(
         elevation: 0.0,
         title: const Text(
@@ -33,21 +31,6 @@ class _DoctorScreenState extends State<DoctorScreen> {
         ),
         centerTitle: true,
         backgroundColor: Colors.white,
-        actions: [
-          Builder(
-            builder: (BuildContext context) {
-              return IconButton(
-                onPressed: () {
-                  Scaffold.of(context).openEndDrawer();
-                },
-                icon: const Icon(
-                  Icons.menu,
-                  color: Colors.black,
-                ),
-              );
-            },
-          ),
-        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(15),

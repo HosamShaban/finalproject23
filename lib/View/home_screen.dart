@@ -1,5 +1,4 @@
 import 'package:finalproject23/controller/home_controller.dart';
-import 'package:finalproject23/widget/NavBar.dart';
 import 'package:finalproject23/widget/home_card.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +16,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      endDrawer: NavBar(),
       appBar: AppBar(
         elevation: 0.0,
         title: const Text(
@@ -36,21 +34,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: Colors.black,
               )),
         ),
-        actions: [
-          Builder(
-            builder: (BuildContext context) {
-              return IconButton(
-                onPressed: () {
-                  Scaffold.of(context).openEndDrawer();
-                },
-                icon: const Icon(
-                  Icons.menu,
-                  color: Colors.black,
-                ),
-              );
-            },
-          ),
-        ],
       ),
       body: SingleChildScrollView(
         child: Padding(

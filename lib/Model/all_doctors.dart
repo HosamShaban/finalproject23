@@ -15,7 +15,7 @@ class AllDoctorsModel {
 
   AllDoctorsModel.fromjson(Map<String, dynamic> map) {
     this.id = map['*** حسب الاسم جهة api'];
-    this.name = map['***'];
+    this. name = map['***'];
     this.img = map['***']['url'];
     this.phoneNom = map['***'];
     this.city = map['***'];
